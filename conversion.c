@@ -18,6 +18,7 @@ int handle_conversion(const char *format, va_list args)
 		{'%', print_percent},
 		{'i', print_integer},
 		{'d', print_integer},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 
