@@ -17,7 +17,7 @@ int print_binary(va_list args)
 	if (num == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 
 	while (num > 0)
@@ -33,5 +33,5 @@ int print_binary(va_list args)
 		count++;
 	}
 
-	return count;
+	return (count);
 }
