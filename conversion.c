@@ -19,6 +19,8 @@ int handle_conversion(const char *format, va_list args)
 		{'i', print_integer},
 		{'d', print_integer},
 		{'b', print_binary},
+		{'u', print_unsigned_int},
+		{'o', print_octal},
 		{'\0', NULL}
 	};
 
@@ -31,5 +33,18 @@ int handle_conversion(const char *format, va_list args)
 		}
 	}
 
+	if (funcs[i].func == NULL)
+	{
+		if (*format == 'x' || *format == 'X')
+		{
+			count += print_hexadecimal(args, *format == 'X');
+		}
+		else
+		{
+			_putchar('%');
+			_putchar(*format);
+			count += 2;
+		}
+	}
 	return (count);
 }
