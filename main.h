@@ -31,5 +31,7 @@ int print_hexadecimal_uppercase(va_list args);
 int print_hexadecimal(va_list args, int uppercase);
 int print_octal(va_list args);
 int print_unsigned_int(va_list args);
+int print_pointer(va_list args);
+int print_hex_address(unsigned long int address);
 
 #endif /* MAIN_H */

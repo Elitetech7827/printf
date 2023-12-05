@@ -21,6 +21,7 @@ int handle_conversion(const char *format, va_list args)
 		{'b', print_binary},
 		{'u', print_unsigned_int},
 		{'o', print_octal},
+		{'p', print_pointer},
 		{'\0', NULL}
 	};
 
